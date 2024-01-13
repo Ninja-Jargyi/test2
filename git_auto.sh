@@ -10,10 +10,10 @@ branch_name="main"
 cd $repo_path || exit 1
 
 # Ensure the repository is clean before starting
-if [[ -n $(git status -s) ]]; then
-  echo "Error: There are uncommitted changes in the repository. Please commit or stash them first."
-  exit 1
-fi
+    if [[ -n $(git status -s) ]]; then
+    echo "Error: There are uncommitted changes in the repository. Please commit or stash them first."
+    exit 1
+    fi
 
 # Pull changes from the remote repository
 git pull origin $branch_name
